@@ -1,0 +1,2 @@
+*{margin:0;padding:0;font-family:sans-serif}.col{border:1px solid salmon;padding:20px;margin:1rem}.flex-grid-thirds{display:-ms-flexbox;display:flex;-ms-flex-pack:justify;justify-content:space-between}.flex-grid-thirds .col:first-child{width:60%}.flex-grid-thirds .col:nth-child(2){width:30%}@media (max-width:400px){.flex-grid-thirds{display:block}}
+/*# sourceMappingURL=main.0d7057d2.css.map*/
