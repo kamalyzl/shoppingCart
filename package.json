@@ -2,8 +2,10 @@
   "name": "shopping-cart",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://kamalyzl.github.io/shoppingCart",
   "dependencies": {
     "axios": "^0.18.0",
+    "gh-pages": "^1.2.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-redux": "^5.0.7",
@@ -14,6 +16,8 @@
     "uid": "^0.0.2"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",

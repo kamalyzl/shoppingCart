@@ -24,7 +24,7 @@ export const reducerAllData = (state = INIT_STATE, action) => {
         ...state,
         filterText: action.text
       }
-      break; 
+      break;
     default:
       return state
   }
@@ -44,9 +44,14 @@ export const reducerList = (state = [], action) => {
   let newState = Object.assign({}, state)
   switch (action.type) {
     case actionTypes.ADD_TO_CART:
+
       newState = state.concat(action.list)
+      console.log(newState)
       return newState
+    case actionTypes.DELETE_PRODUCT:
+      return state.filter(product => product.id !== action.product.id)
     default:
       return state
   }
 }
+

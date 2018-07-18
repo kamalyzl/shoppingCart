@@ -5,6 +5,7 @@ export const actionTypes = {
   FILTER_TEXT: 'FILTER_TEXT',
   DATA_LOADED: 'DATA_LOADED',
   ADD_TO_CART: 'ADD_TO_CART',
+  DELETE_PRODUCT: 'DELETE_PRODUCT',
 };
 
 export const filterTextChanged = text => ({
@@ -12,6 +13,10 @@ export const filterTextChanged = text => ({
   text
 });
 
+export const deleteProductAction = deleteProduct => ({
+  type: actionTypes.DELETE_PRODUCT,
+  product: deleteProduct
+});
 
 export const addToCartList = productsList => ({
   type: actionTypes.ADD_TO_CART,
