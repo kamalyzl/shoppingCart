@@ -15,14 +15,14 @@ class Home extends Component {
 
   render() {
     return (
-      <div>
-        <h1>Venta de Autos</h1>
+      <div className="container-fluid">
+      <h1>Venta de Autos</h1>
         <SearchBar />
-        <div className="flex-grid-thirds">
-          <div className="col">
+        <div className="row">
+          <div className="col-sm-12 col-md-8">
             <Cards products={this.props.products} />
           </div>
-          <div className="col">
+          <div className="col-sm-12 col-md-4">
             <List productsList={this.props.reducerList} />
           </div>
         </div>
@@ -38,9 +38,10 @@ Home.propTypes = {
 }
 
 const mapStateToProps = (state) => {
-  const { filteredProducts } = state.reducerAllData;
+  const { filteredProducts, originalProducts } = state.reducerAllData;
   return {
     products: filteredProducts,
+    productsOrginial: originalProducts,
     reducerList: state.reducerList
   };
 }

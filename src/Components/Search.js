@@ -7,11 +7,13 @@ import { filterTextChanged } from '../redux/actions';
 const SearchBar = ({ filterText, setFilterText }) => {
   return (
     <form>
-      <input
-        type="text" placeholder="Search..."
-        value={filterText}
-        onChange={evt => setFilterText(evt.target.value)}
-      />
+      <div className="form-group col-md-4"> 
+        <input type="text"
+          className="form-control"
+          id="formGroupExampleInput"
+          placeholder="Buscar..." value={filterText}
+          onChange={evt => setFilterText(evt.target.value)} />
+      </div>
     </form>
   );
 }

@@ -6,7 +6,6 @@ import { actionTypes } from './actions';
 const INIT_STATE = {
   originalProducts: [],
   filterText: '',
-  inStockOnly: false,
   filteredProducts: [],
 
 }

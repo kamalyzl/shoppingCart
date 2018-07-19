@@ -5,15 +5,13 @@ import { deleteProductAction } from '../redux/actions';
 
 
 
-
-
-const List = ({ productsList,deleteProduct }) => {
+const List = ({ productsList, deleteProduct }) => {
   return (
-    <ul className="list">
+    <ul className="list-group">
       {productsList.map((products) =>
-        <li key={uid(10)}>{products.title} <br />
+        <li className="list-group-item d-flex justify-content-between align-items-center" key={uid(10)}>{products.title} <br />
           <span>Precio: {`${products.currency_id}-${products.price}`}</span>
-          <button onClick={() => deleteProduct(products)}>Eliminar</button>
+          <button type="button" className="btn btn-danger" onClick={() => deleteProduct(products)}>Eliminar</button>
         </li>
       )}
     </ul>
@@ -21,7 +19,7 @@ const List = ({ productsList,deleteProduct }) => {
 }
 
 // mapStateToProps obtiene los datos del estado
-const mapStateToProps = (state) => {  
+const mapStateToProps = (state) => {
   // y devolvemos las nuevas props
   return {
     reducerList: state.reducerList
@@ -38,10 +36,9 @@ const mapDispatchToProps = (dispatch) => {
 
 
 
-export default connect(mapStateToProps,mapDispatchToProps)(List);
-
- 
+export default connect(mapStateToProps, mapDispatchToProps)(List);
 
 
 
- 
+
+
