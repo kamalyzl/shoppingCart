@@ -14,13 +14,19 @@ class Home extends Component {
   }
 
   render() {
+    const getData = () => {
+      if (this.props.products.length < 1)
+        return this.props.productsOrginial
+      else return this.props.products
+    }
+    
     return (
       <div className="container-fluid">
-      <h1>Venta de Autos</h1>
+        <h1>Venta de Autos</h1>
         <SearchBar />
         <div className="row">
           <div className="col-sm-12 col-md-8">
-            <Cards products={this.props.products} />
+            <Cards products={getData()} />
           </div>
           <div className="col-sm-12 col-md-4">
             <List productsList={this.props.reducerList} />

@@ -28,6 +28,17 @@ export const reducerAllData = (state = INIT_STATE, action) => {
       return state
   }
 
+  // if (action.type === actionTypes.FILTER_TEXT) {
+  //   const filteredProducts = state.originalProducts.filter(item => {
+  //     return item.title.toLowerCase().search(action.text.toLowerCase()) !== -1;
+  //   })
+  //   state = {
+  //     ...state,
+  //     filteredProducts
+  //   }
+  // } return state
+
+
   if (action.type === actionTypes.FILTER_TEXT) {
     const filteredProducts = state.originalProducts.filter(item => {
       return item.title.toLowerCase().search(action.text.toLowerCase()) !== -1;
@@ -37,6 +48,8 @@ export const reducerAllData = (state = INIT_STATE, action) => {
       filteredProducts
     }
   } return state
+
+  
 }
 
 export const reducerList = (state = [], action) => {
